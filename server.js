@@ -39,7 +39,7 @@ app.post('/send-noti',(req,res)=>{
     notification:{
         title:"title",
         body:"new ad posted click to open",
-        imageUrl: 'https://my-cdn.com/app-logo.png',
+        image: 'https://my-cdn.com/app-logo.png',
     },
     tokens:req.body.tokens
     

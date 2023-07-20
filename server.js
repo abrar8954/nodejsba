@@ -39,7 +39,7 @@ app.post('/send-noti',(req,res)=>{
     notification:{
         title:"title",
         body:"new ad posted click to open",
-        imageUrl: 'https://firebasestorage.googleapis.com/v0/b/dukanfiba.appspot.com/o/images%2FshopImages%2F-NWDYgcOggK8JILReyRt?alt=media&token=58ede0d3-7b8a-4e51-8228-fd35660bc49e',
+        imageUrl: 'https://my-cdn.com/app-logo.png',
     },
     tokens:req.body.tokens
     

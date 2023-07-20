@@ -37,9 +37,9 @@ app.post('/send-noti',(req,res)=>{
     // res.end('HI there');
    const message = { 
     notification:{
-        title:"title",
-        body:"new ad posted click to open",
-        image: 'https://my-cdn.com/app-logo.png',
+        title:"Hi! Abrar",
+        body:"Where are you going? man.",
+        image: 'https://firebasestorage.googleapis.com/v0/b/dukanfiba.appspot.com/o/images%2FshopImages%2F-NWDYgcOggK8JILReyRt?alt=media&token=58ede0d3-7b8a-4e51-8228-fd35660bc49e',
     },
     tokens:req.body.tokens
     

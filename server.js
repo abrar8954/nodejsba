@@ -1,6 +1,6 @@
 const admin = require('firebase-admin')
 const express = require('express')
-// import notifee from '@notifee/react-native';
+import notifee from '@notifee/react-native';
 const app = express()
 const port = process.env.PORT || 3000
 
@@ -64,11 +64,22 @@ app.post('/send-noti', (req, res) => {
     // res.setHeader('Content-Type', 'text/plain');
     // res.end('HI there');
     const message = {
-        notification: {
-            title: "Hi! Abrar",
-            body: "Where are you going? man.",
 
-        },
+        notification: notifee.displayNotification({
+            title: 'Notification Title',
+            body: 'Main body content of the notification',
+            android: {
+              channelId,
+              largeIcon: 'https://firebasestorage.googleapis.com/v0/b/dukanfiba.appspot.com/o/images%2FshopImages%2F-NWDYgcOggK8JILReyRt?alt=media&token=58ede0d3-7b8a-4e51-8228-fd35660bc49e',
+              // circularLargeIcon: 'https://firebasestorage.googleapis.com/v0/b/dukanfiba.appspot.com/o/images%2FshopImages%2F-NWDYgcOggK8JILReyRt?alt=media&token=58ede0d3-7b8a-4e51-8228-fd35660bc49e',
+              // smallIcon: , // optional, defaults to 'ic_launcher'.
+              // pressAction is needed if you want the notification to open the app when pressed
+              pressAction: {
+                id: 'default',
+              },
+            },
+          }),
+        
         // notification: onDisplayNotification(),
         tokens: req.body.tokens
 

@@ -75,7 +75,7 @@ app.post('/send-noti', (req, res) => {
     const message = {
         data: {
             notifee: JSON.stringify({
-                title: `<Text style={{color: 'red'}}>Add Data!</Text>`,
+                title: `<View style={{ flex: 1, justifyContent: 'center', alignItems: 'space-between' }}><Text style={{color: 'red'}}>Add Data!</Text> <Text style={{color: 'red'}}>Remove Data!</Text></View>`,
                 body: 'This message was sent via FCM!',
                 android: {
                     channelId: 'default',

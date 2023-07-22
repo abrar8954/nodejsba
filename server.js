@@ -72,27 +72,38 @@ app.post('/send-noti', (req, res) => {
     //     tokens: req.body.tokens
     // }
 
+    // const message = {
+    //         data: {
+    //             notifee: JSON.stringify({
+    //                 title: 'Hi there',
+    //                 body: 'This message was sent via FCM!',
+    //                 android: {
+    //                     channelId: 'default',
+    //                     largeIcon: 'https://firebasestorage.googleapis.com/v0/b/dukanfiba.appspot.com/o/images%2FshopImages%2F-NWDYgcOggK8JILReyRt?alt=media&token=58ede0d3-7b8a-4e51-8228-fd35660bc49e',
+    //                 },
+    //             }),
+    //         },
+    //         tokens: req.body.tokens
+
+    //     }
+
+
     const message = {
-            data: {
-                notifee: JSON.stringify({
-                    title: 'Hi there',
-                    body: 'This message was sent via FCM!',
-                    android: {
-                        channelId: 'default',
-                        largeIcon: 'https://firebasestorage.googleapis.com/v0/b/dukanfiba.appspot.com/o/images%2FshopImages%2F-NWDYgcOggK8JILReyRt?alt=media&token=58ede0d3-7b8a-4e51-8228-fd35660bc49e',
-                    },
-                }),
-            },
-            tokens: req.body.tokens
+        data: {
+            title: 'Hi there',
+            body: 'This message was sent via FCM!',
+            largeIcon: 'https://firebasestorage.googleapis.com/v0/b/dukanfiba.appspot.com/o/images%2FshopImages%2F-NWDYgcOggK8JILReyRt?alt=media&token=58ede0d3-7b8a-4e51-8228-fd35660bc49e',
+        },
+        tokens: req.body.tokens
 
-        }
+    }
 
-        admin.messaging().sendMulticast(message).then(res => {
-            console.log('send success')
-        }).catch(err => {
-            console.log(err)
-        })
+    admin.messaging().sendMulticast(message).then(res => {
+        console.log('send success')
+    }).catch(err => {
+        console.log(err)
     })
+})
 
 app.listen(port, () => {
     console.log('server running')

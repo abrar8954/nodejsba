@@ -1,6 +1,6 @@
 const admin = require('firebase-admin')
 const express = require('express')
-import notifee, { AndroidStyle } from '@notifee/react-native';
+// import notifee, { AndroidStyle } from '@notifee/react-native';
 const app = express()
 const port = process.env.PORT || 3000
 
@@ -89,27 +89,6 @@ app.post('/send-noti', (req, res) => {
                                 },
                             },
                         ],
-                        style: {
-                            type: AndroidStyle.MESSAGING,
-                            person: {
-                                name: 'John Doe',
-                                icon: 'https://my-cdn.com/avatars/123.png',
-                            },
-                            messages: [
-                                {
-                                    text: 'Hey, how are you?',
-                                    timestamp: Date.now() - 600000, // 10 minutes ago
-                                },
-                                {
-                                    text: 'Great thanks, food later?',
-                                    timestamp: Date.now(), // Now
-                                    person: {
-                                        name: 'Sarah Lane',
-                                        icon: 'https://my-cdn.com/avatars/567.png',
-                                    },
-                                },
-                            ],
-                        },
                     },
                 }),
             },

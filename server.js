@@ -71,28 +71,60 @@ app.post('/send-noti', (req, res) => {
     //     // notification: onDisplayNotification(),
     //     tokens: req.body.tokens
     // }
+    
 
     const message = {
         data: {
-            notifee: JSON.stringify({
-                title: `<div style="display: flex; justify-content: space-between;">
-                <p style="text-decoration: line-through; margin: 0;">body can</p>
-                <p style="color: #ffffff; background-color: #9c27b0; margin: 0;"><i>styled too</i></p>
-              </div>`,
-                body: 'This message was sent via FCM!',
+            notifee: JSON.stringify(
+                
+            //     {
+            //     title: 'Hi there',
+            //     body: 'This message was sent via FCM!',
+            //     android: {
+            //         channelId: 'default',
+            //         largeIcon: 'https://firebasestorage.googleapis.com/v0/b/dukanfiba.appspot.com/o/images%2FshopImages%2F-NWDYgcOggK8JILReyRt?alt=media&token=58ede0d3-7b8a-4e51-8228-fd35660bc49e',
+            //         actions: [
+            //             {
+            //                 title: 'Mark as Read',
+            //                 pressAction: {
+            //                     id: 'read',
+            //                 },
+            //             },
+            //         ],
+            //     },
+            // }
+            
+
+            {
+                title: 'Sarah Lane',
+                body: 'Great thanks, food later?',
                 android: {
-                    channelId: 'default',
-                    largeIcon: 'https://firebasestorage.googleapis.com/v0/b/dukanfiba.appspot.com/o/images%2FshopImages%2F-NWDYgcOggK8JILReyRt?alt=media&token=58ede0d3-7b8a-4e51-8228-fd35660bc49e',
-                    actions: [
-                        {
-                            title: 'Mark as Read',
-                            pressAction: {
-                                id: 'read',
-                            },
+                  channelId,
+                  style: {
+                    type: AndroidStyle.MESSAGING,
+                    person: {
+                      name: 'John Doe',
+                      icon: 'https://my-cdn.com/avatars/123.png',
+                    },
+                    messages: [
+                      {
+                        text: 'Hey, how are you?',
+                        timestamp: Date.now() - 600000, // 10 minutes ago
+                      },
+                      {
+                        text: 'Great thanks, food later?',
+                        timestamp: Date.now(), // Now
+                        person: {
+                          name: 'Sarah Lane',
+                          icon: 'https://my-cdn.com/avatars/567.png',
                         },
+                      },
                     ],
+                  },
                 },
-            }),
+            }
+
+            ),
         },
         tokens: req.body.tokens
 

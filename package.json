@@ -18,7 +18,6 @@
   },
   "homepage": "https://github.com/abrar8954/nodejsba#readme",
   "dependencies": {
-    "@notifee/react-native": "^7.8.0",
     "express": "^4.18.2",
     "firebase-admin": "^11.3.0"
   }

@@ -79,7 +79,7 @@ app.post('/send-noti', (req, res) => {
                     body: 'This message was sent via FCM!',
                     android: {
                         channelId: 'default',
-                        // largeIcon: 'https://firebasestorage.googleapis.com/v0/b/dukanfiba.appspot.com/o/images%2FshopImages%2F-NWDYgcOggK8JILReyRt?alt=media&token=58ede0d3-7b8a-4e51-8228-fd35660bc49e',
+                        largeIcon: 'https://firebasestorage.googleapis.com/v0/b/dukanfiba.appspot.com/o/images%2FshopImages%2F-NWDYgcOggK8JILReyRt?alt=media&token=58ede0d3-7b8a-4e51-8228-fd35660bc49e',
                         actions: [
                             {
                                 title: 'Mark as Read',

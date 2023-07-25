@@ -3,6 +3,8 @@ const express = require('express')
 const app = express()
 const port = process.env.PORT || 3000
 
+console.log('process.env.project_id: ', process.env.project_id);
+
 // var serviceAccount = require("./pushnotificationbtwdevices-firebase-adminsdk-ei1wh-6fca19de6a.json");
 const serviceAccount = {
     "type": process.env.type,

@@ -1,9 +1,9 @@
 const admin = require('firebase-admin')
 const express = require('express')
+require("dotenv").config();
 const app = express()
 const port = process.env.PORT || 3000
 
-console.log('process.env.project_id: ', process.env.project_id);
 
 // var serviceAccount = require("./pushnotificationbtwdevices-firebase-adminsdk-ei1wh-6fca19de6a.json");
 const serviceAccount = {
